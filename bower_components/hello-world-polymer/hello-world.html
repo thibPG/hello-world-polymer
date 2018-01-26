@@ -20,6 +20,12 @@ Polymer({
     },
     attached: function(){
         console.log('attached');
+    },
+    observers: [
+        'parseWho_(who)',
+    ],
+    parseWho_: function(value){
+        console.log('observed who change');
     }
 });
 </script>
